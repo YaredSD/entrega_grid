@@ -98,19 +98,43 @@ button{
   cursor: pointer;
 }
 
-@media (max-width: 699px) {
-  body {
-    display: grid;
-    grid-template-areas: "header"
-                         "school"
-                         "student"
-                         "main"
-                         "time"
-                         "alumni"
-                         "footer";
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(auto-fit(1fr));
+@media screen and (max-width: 699px) {
+  .ody{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit);
+  }
+  header{
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  header > p {
+    margin: 15%;
+  }
+  .school{
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .student{
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  main{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    height: 200px;
+  }
+  .time{
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  .alumni{
+    grid-column: 1/2;
+    grid-row: 7/8;
+  }
+  footer{
+    grid-column: 1/2;
+    grid-row: 8/9;
+    text-align: center;
   }
 }
-
-/*Ya lo he intentado de mil formas y esto último del responsive no lo logro*
+/*Ya lo he intentado de mil formas y esto último del responsive no lo logro hacer en pocas líneas de código*/
